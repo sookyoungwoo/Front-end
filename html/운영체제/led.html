@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "container">
+        <div class = "header">
+            <h1>LED ON OFF</h1>
+        </div>
+        <div class = "main">
+            <button onclick="led_on()">LED ON</button>
+            <button onclick="led_off()">LED OFF</button>
+        </div>
+        <div class = "result">
+        
+        </div>
+    </div>
+    <script src = "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type = text/javascript>
+    function led_on() {
+        var result = document.querySelector(".result");
+        var data = "<h3>LED ON</h3>";
+        result.innerHTML = data;
+        alert(data);
+
+        $.ajax({
+            type: 'GET',
+            url: '/led/on',
+            success: function(res) {
+                alert(res)
+            }
+        })
+    }
+    function led_off() {
+        var result = document.querySelector(".result");
+        var data = "<h3>LED OFF</h3>";
+        result.innerHTML = data;
+        alert(data);
+
+        $.ajax({
+            type: 'GET',
+            url: '/led/off',
+            success: function(res) {
+                alert(res)
+            }
+        })
+    }
+    </script>
+</body>
+</html>

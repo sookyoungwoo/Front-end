@@ -1,0 +1,14 @@
+1. position 속성 : 웹 요소의 배치 방법 지정
+static : 문서의 흐름에 맞춰 배치(기본값)
+relative : 위치값을 지정하며 흐름에 맞춰 배치
+absolute : relative 값을 사용한 상위 요소를 기준으로 위치를 지정
+position : absolute를 사용하려면 부모요소에 position : relative를 꼭 적용 해야 함, 주의
+fixed : 브라우저 창을 기준으로 위치를 지정
+
+2. left, right, top, bottom : 요소의 위치 지정
+left : 기준 위치와 요소 사이에 왼쪽으로 얼마나 떨어져 있는지 지정
+right : 기준 위치와 요소 사이에 오른쪽으로 얼마나 떨어져 있는지 지정
+top : 기준 위치와 요소 사이에 윈쪽으로 얼마나 떨어져 있는지 지정
+bottom : 기준 위치와 요소 사이에 아래쪽으로 얼마나 떨어져 있는지 지정
+ 
+ex) 텍스트 요소 자유롭게 배치하기 (저작권 없는 텍스트 : 로렘 입숨(loremipsum)
